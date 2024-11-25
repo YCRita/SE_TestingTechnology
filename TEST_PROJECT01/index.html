@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2></h2>
+
+<p></p>
+
+
+<input id="textbox" type="text"></input>
+
+<script src="codechallenge1.js" defer></script>
+<script>
+    function main(){
+        // const inputText = document.getElementById("textbox").value
+        // const reversedString = reverseString(inputText);
+        // document.getElementById("output").value = reversedString
+        // //console.log(reversedString);
+    
+        const inputArr = [
+            { item: "irn bru", price: 3.25, stock: 50 },
+            { item: "fanta", price: 3.98, stock: 45 },
+            { item: "diet coke", price: 4.40, stock: 38 }, 
+            { item: "7up", price: 3.99, stock: 42 }, 
+        ]
+        
+        let result = mostExpensiveItem(inputArr);
+        console.log(result);
+    
+    }
+</script>
+<button onclick="main()"> get result! </button>
+<input id="output" disabled="true"></input>
+</body>
+</html>
