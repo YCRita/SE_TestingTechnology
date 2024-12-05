@@ -1,3 +1,9 @@
+
+//============TASK1=========
+//use built in method
+let reverseString = str => str.split("").reverse().join("");
+
+//write function myself
 function reverseString(a){
 
     const splitCharacter = [];
@@ -17,7 +23,12 @@ function reverseString(a){
     return reverse
 }
 
+//============TASK2=========
+//use built in method
+let reverseArray = (array) => array.reverse();
 
+
+//write function myself
 function reverseArray(a){
     const reverseArray = [];
 
@@ -30,8 +41,39 @@ function reverseArray(a){
     return reverseArray;
 }
 
+//============TASK3=========
+
+//instructor solution
+
+const items = [
+    { item: "irn bru", price: 3.25, stock: 50 },
+    { item: "fanta", price: 3.98, stock: 45 },
+    { item: "diet coke", price: 4.40, stock: 38 }, 
+    { item: "7up", price: 3.99, stock: 42 }, 
+ ];
+
+const mostExpensiveItem (array) => {
+    let mostExpensiveItemObj = {};
+// cost most expensive
+    let mostExpensiveItemCost = 0; // stock* price
+    
+
+    //loop through array items
+    for (let i = 0; i < array.length; i++){
+        const costTiedupSingleItem = array[i].price * array[i].stock;
+    
+    if (costTiedupSingleItem > mostExpensiveItem){
+        mostExpensiveItem = costTiedupSingleItem;
+        mostExpensiveItem = array[i];
+        }
+    }
+    return mostExpensiveItemObj;
+}
 
 
+console.log(mostExpensiveItem(items));
+
+//mine version-  comparision 
 function mostExpensiveItem(anyArray){
 
     let mostExpensiveItem = anyArray[0];
@@ -49,3 +91,5 @@ function mostExpensiveItem(anyArray){
 
     return mostExpensiveItem;
 }
+
+console.log(mostExpensiveItem(anyArray));
