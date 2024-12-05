@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>RPS Game</title>
+
+        <style>
+            .options{
+                display: flex;
+                justify-content: center;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <!--Buttons-->
+        <div class="options">
+            <button id="Rock">Rock</button>
+            <button id="Papper">Papper</button>
+            <button id="Scissors">Scissors</button>
+        </div>
+        <br>
+
+        <!--info-->
+        <div>
+            <h2>Your option :<span id="user-option"></span></h2>
+            <h2>Computer option : <span id="computer-option"></span></h2>
+            <h2>Result:<span id="result"></span></h2>
+
+
+        </div>
+
+
+        <script>
+
+            //get button
+            const rockBtn = document.getElementById("Rock");
+            const papperBtn = document.getElementById("Papper");
+            const scissorsBtn = document.getElementById("Scissors");
+
+
+            //options
+            const option = ["Rock","Papper","Scissors"];
+
+
+            //get spans
+            const userOptionSpan = document.getElementById("user-option");
+            const computerOptionSpan = document.getElementById("computer-option")
+            const resultSpan = document.getElementById("result");
+
+
+            //clcick listioner
+
+            rockBtn.addEventListener("click",function(){
+                //userOptionSpan.innerHTML=option[0];
+                playGame(option[0]);
+            });
+
+            papperBtn.addEventListener("click",function(){
+                //userOptionSpan.innerHTML=option[1];
+                playGame(option[1]);
+            });
+
+            scissorsBtn.addEventListener("click",function(){
+                //userOptionSpan.innerHTML=option[2];
+                playGame(option[2]);
+            });
+
+
+            // function
+
+
+            function playGame(userOption){
+
+                //computer option
+                const computerOption = option[Math.floor(Math.random()*option.length)];
+
+                computerOptionSpan.innerHTML = computerOption;
+                //set user option
+                userOptionSpan.innerHTML = userOption;
+
+
+                //compare 
+                if (userOption === computerOption){
+                    resultSpan.innerHTML = "tie!!!";
+                }
+
+
+                //rock vs scissor
+                else if ( userOption === "Rock" && computerOption === "Scissors"){
+                    resultSpan.innerHTML = "you win!!!";
+                }
+
+                //paper vs rock
+                else if (userOption === "Papper" && computerOption==="Rock"){
+                    resultSpan.innerHTML = "you win!!!";
+                }
+
+
+                //scissor vs papper
+                else if (userOption === "Scissors" && computerOption === "Papper"){
+                    resultSpan.innerHTML = "you win!!!";
+                }
+
+
+                //resultSpan.innerHTML = "You lose!!!";
+
+                //otherwise
+
+                else{
+                    resultSpan.innerHTML = "You lost!!";
+                }
+
+            }
+
+
+        </script>
+
+    </body>
+</html>
