@@ -8,12 +8,15 @@ console.log(greet("James"));
 
 //Q2
 
-isEven = num => num % 2 === 0 ;
+let isEven = num => num % 2 === 0 ;
 
+console.log(isEven(3));
+console.log(isEven(7));
+console.log(isEven(8));
 
 //Q3
 
-counterFunc= counter => {
+let counterFunc= counter => {
     if (counter > 100 ){
         counter = 0 ;
     } else {
@@ -31,7 +34,7 @@ let nameAge (name,age) => {
 
 //Q5
 
-printOnly = () => console.log("Printing");
+let printOnly = () => console.log("Printing");
 
 //Q6
 
