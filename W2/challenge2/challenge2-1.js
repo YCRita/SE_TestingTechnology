@@ -2,13 +2,13 @@
 class User {
   
     constructor(firstName, lastName) {
-        this._firstName = firstName;
-        this._lastName = lastName;
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
   
     
     hello() {
-        console.log(`Hello, ${this._firstName} ${this._lastName}`);
+        console.log(`Hello, ${this.firstName} ${this.lastName}`);
     }
 }
   
@@ -16,9 +16,10 @@ class User {
 const user1 = new User('John', 'Doe');
 const user2 = new User('Jane', 'Doe');
   
+console.log(`New user : ${user1.firstName} ${user1.lastName}`); 
 user1.hello();
-console.log(`${user1._firstName} ${user1._lastName}`);   
 
+console.log(`New user : ${user2.firstName} ${user2.lastName}`); 
 user2.hello();
-console.log(`${user2._firstName} ${user2._lastName}`);  
+ 
 
